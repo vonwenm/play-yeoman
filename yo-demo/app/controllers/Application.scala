@@ -7,20 +7,25 @@ import play.twirl.api.Html
 object Application extends Controller {
 
   def index = Action {
-    Ok(views.html.index("Your new application is ready."))
+    Ok("Your new application is ready.")
+   // Ok(views.html.index("Your new application is ready."))
   }
 
   def templateDemo = Action {
-    Ok(views.html.demo("Scala template in Angular")
-      (Html("This is a play scala template in angular views folder which is compiled and used inplace!</div>"))
-    )
+      Ok("Your new application is ready.")
+    //Ok(views.html.demo("Scala template in Angular")
+    //  (Html("This is a play scala template in angular views folder which is compiled and used inplace!</div>"))
+    //)
   }
 
   def json(keyword: String) = Action {
-    Ok(JsObject("keyword" -> JsString(keyword) :: Nil))
+      Ok("Your new application is ready.")
+   // Ok(JsObject("keyword" -> JsString(keyword) :: Nil))
   }
 
   def serveTemplate = Action {
-    Ok(views.html.templ("Compiled from a scala template!"))
+      Ok("Your new application is ready.")
+    //Ok(views.html.templ("Compiled from a scala template!"))
+    
   }
 }
